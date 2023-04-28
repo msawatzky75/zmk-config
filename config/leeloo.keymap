@@ -83,6 +83,19 @@
             layers = <QW_M>;
             bindings = <&kp LA(F4)>;
         };
+
+        combo_shift_gui {
+            timeout-ms = <200>;
+            key-positions = <24 51>;
+            layers = <QW_M>;
+            bindings = <&kp LG(LSHIFT)>;
+        };
+        combo_ctrl_shift_gui {
+            timeout-ms = <200>;
+            key-positions = <24 36 51>;
+            layers = <QW_M>;
+            bindings = <&kp LG(LC(LSHIFT))>;
+        };
     };
 
     macros {
@@ -121,6 +134,38 @@
             tapping-term-ms = <200>;
             bindings = <&kp Q>, <&kp LA(F4)>;
         };
+
+        tdw_LRP: tap_dance_1 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "WIN_LRPAR";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LPAR>, <&kp RPAR>;
+        };
+
+        tdx_LRB: tap_dance_2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "WIN_LRBKT";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LBKT>, <&kp RBKT>;
+        };
+
+        tdx_LRR: tap_dance_3 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "WIN_LRBRC";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LBRC>, <&kp RBRC>;
+        };
+
+        tdx_LRA: tap_dance_4 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "WIN_LRANG";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LT>, <&kp GT>;
+        };
     };
 
     keymap {
@@ -136,11 +181,11 @@
 // |  CTRL |  ;  |  Q  |  J   |  K   |  X   |   NUL  |  |  NUM  |  B   |  M    |  W    |  V   |   Z   | SHIFT |
 //                     | ALT  | GUI  |  ??  |  SPACE |  | ENTER |  ??  | BSPC  | RCTL |
             bindings = <
-&kp ESC    &kp N1     &kp N2     &kp N3     &kp N4     &kp N5                           &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &kp GRAV
-&kp TAB    &kp SQT    &kp COMMA  &kp DOT    &kp P      &kp Y                            &kp F      &kp G      &kp C      &kp R      &kp L      &kp FSLH
-&kp LSHIFT &kp A      &kp O      &kp E      &kp U      &kp I                            &kp D      &kp H      &kp T      &kp N      &kp S      &kp MINUS
-&kp LCTRL  &kp SEMI   &kp Q      &kp J      &kp K      &kp X    &kp C_PP    &mo QC_N    &kp B      &kp M      &kp W      &kp V      &kp Z      &kp RSHFT
-                              &kp LALT &lt 1 LGUI  &lt 2 MINUS  &kp SPACE   &kp RET   &lt 2 EQUAL &lt 1 BSPC  &mo QC_F
+&kp ESC    &kp N1     &kp N2     &kp N3     &kp N4     &kp N5                           &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &kp GRAV  // 0-11
+&kp TAB    &kp SQT    &kp COMMA  &kp DOT    &kp P      &kp Y                            &kp F      &kp G      &kp C      &kp R      &kp L      &kp FSLH  // 12-23
+&kp LSHIFT &kp A      &kp O      &kp E      &kp U      &kp I                            &kp D      &kp H      &kp T      &kp N      &kp S      &kp MINUS // 24-35
+&kp LCTRL  &kp SEMI   &kp Q      &kp J      &kp K      &kp X    &kp C_PP    &mo QC_N    &kp B      &kp M      &kp W      &kp V      &kp Z      &kp RSHFT // 36-49
+                              &kp LALT &lt 1 LGUI  &lt 2 MINUS  &kp SPACE   &kp RET   &lt 2 EQUAL &lt 1 BSPC  &mo QC_F                                   // 50-58
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -149,11 +194,11 @@
         lower_dvorak_layer {
             label = " Lower";
             bindings = <
-&trans     &trans     &trans     &trans     &trans     &trans                           &trans     &trans     &trans     &trans     &trans     &kp PSCRN
-&trans     &trans     &trans     &trans     &trans     &trans                           &trans     &trans     &trans     &trans     &trans     &kp BSLH
-&trans     &trans     &kp LT     &kp LPAR   &kp LBKT   &kp LBRC                         &kp RBRC   &kp RBKT   &kp RPAR   &kp GT     &trans     &trans
-&trans     &trans     &trans     &trans     &trans     &trans     &trans      &trans    &enDSH_W   &emDSH_W   &trans     &trans     &trans     &trans
-                                 &trans     &trans     &trans     &trans      &trans    &trans     &trans     &trans
+&trans         &trans     &trans     &trans     &kp WIN_SC &trans                           &trans     &trans     &trans     &trans     &trans     &kp PSCRN
+&trans         &tdx_LRA   &tdw_LRP   &tdx_LRB   &tdx_LRR   &trans                           &trans     &trans     &trans     &trans     &trans     &kp BSLH
+&trans         &trans     &trans     &trans     &trans     &trans                           &trans     &trans     &trans     &trans     &trans     &trans
+&trans         &trans     &trans     &trans     &trans     &trans     &trans      &trans    &enDSH_W   &emDSH_W   &trans     &trans     &trans     &trans
+                                     &trans     &trans     &trans     &trans      &trans    &trans     &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp UP DOWN>;
@@ -162,8 +207,8 @@
         raise_dvorak_layer {
             label = " Raise";
             bindings = <
-&trans     &trans     &trans     &trans     &kp WIN_SC &trans                           &trans     &trans     &trans     &trans     &trans     &trans
-&trans     &trans     &trans     &trans     &trans     &trans                           &kp PG_UP  &kp HOME   &trans     &kp END    &trans     &trans
+&trans     &trans     &trans     &trans     &trans     &trans                           &trans     &trans     &trans     &trans     &trans     &trans
+&trans     &trans     &trans     &trans     &trans     &trans                           &kp PG_UP  &kp HOME   &kp END    &trans     &trans     &trans
 &trans     &trans     &trans     &trans     &trans     &trans                           &kp PG_DN  &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &trans
 &trans     &trans     &trans     &trans     &trans     &trans     &trans      &trans    &trans     &trans     &trans     &trans     &trans     &trans
                                  &trans     &trans     &trans     &trans      &trans    &trans     &kp DEL    &trans
