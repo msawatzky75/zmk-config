@@ -5,7 +5,7 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: leeloo_v2_branch
+      revision: leeloo_micro_v1_branch
       import: app/west.yml
   self:
     path: config
