@@ -196,7 +196,7 @@
             bindings = <
 &trans         &trans     &trans     &trans     &kp WIN_SC &trans                           &trans     &trans     &trans     &trans     &trans     &kp PSCRN
 &trans         &tdx_LRA   &tdw_LRP   &tdx_LRB   &tdx_LRR   &trans                           &trans     &trans     &trans     &trans     &trans     &kp BSLH
-&trans         &trans     &trans     &trans     &trans     &trans                           &trans     &trans     &trans     &trans     &trans     &trans
+&trans         &trans     &trans     &trans     &trans     &trans                           &trans     &trans     &trans     &trans     &trans     &kp PIPE
 &trans         &trans     &trans     &trans     &trans     &trans     &trans      &trans    &enDSH_W   &emDSH_W   &trans     &trans     &trans     &trans
                                      &trans     &trans     &trans     &trans      &trans    &trans     &trans     &trans
             >;
