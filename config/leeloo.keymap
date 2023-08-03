@@ -79,19 +79,19 @@
 
         combo_quit_app_win {
             timeout-ms = <50>;
-            key-positions = <13 14>;
+            key-positions = <13 17>;
             layers = <QW_M>;
             bindings = <&kp LA(F4)>;
         };
 
         combo_shift_gui {
-            timeout-ms = <200>;
+            timeout-ms = <50>;
             key-positions = <24 51>;
             layers = <QW_M>;
             bindings = <&kp LG(LSHIFT)>;
         };
         combo_ctrl_shift_gui {
-            timeout-ms = <200>;
+            timeout-ms = <50>;
             key-positions = <24 36 51>;
             layers = <QW_M>;
             bindings = <&kp LG(LC(LSHIFT))>;
@@ -178,7 +178,7 @@
 // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |
 // |  TAB  |  '  |  ,  |  .   |  P   |  Y   |                   |  F   |  G    |  C    |  R   |   L   |   /   |
 // | SHIFT |  A  |  O  |  E   |  U   |  I   |                   |  D   |  H    |  T    |  N   |   S   |   -   |
-// |  CTRL |  ;  |  Q  |  J   |  K   |  X   |   NUL  |  |  NUM  |  B   |  M    |  W    |  V   |   Z   | SHIFT |
+// |  CTRL |  ;  |  Q  |  J   |  K   |  X   |  Play  |  |  NUM  |  B   |  M    |  W    |  V   |   Z   | SHIFT |
 //                     | ALT  | GUI  |  ??  |  SPACE |  | ENTER |  ??  | BSPC  | RCTL |
             bindings = <
 &kp ESC    &kp N1     &kp N2     &kp N3     &kp N4     &kp N5                           &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &kp GRAV  // 0-11
