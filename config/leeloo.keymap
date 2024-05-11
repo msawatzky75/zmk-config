@@ -185,7 +185,7 @@
 &kp TAB    &kp SQT    &kp COMMA  &kp DOT    &kp P      &kp Y                            &kp F      &kp G      &kp C      &kp R      &kp L      &kp FSLH  // 12-23
 &kp LSHIFT &kp A      &kp O      &kp E      &kp U      &kp I                            &kp D      &kp H      &kp T      &kp N      &kp S      &kp MINUS // 24-35
 &kp LCTRL  &kp SEMI   &kp Q      &kp J      &kp K      &kp X    &kp C_PP    &mo QC_N    &kp B      &kp M      &kp W      &kp V      &kp Z      &kp RSHFT // 36-49
-                              &kp LALT   &kp LGUI  &lt 2 MINUS  &kp SPACE   &kp RET   &lt 2 EQUAL &lt 1 BSPC  &mo QC_F                                   // 50-58
+                              &kp LALT &lt 1 LGUI  &lt 2 MINUS  &kp SPACE   &kp RET   &lt 2 EQUAL &lt 1 BSPC  &mo QC_F                                   // 50-58
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -198,7 +198,7 @@
 &trans         &tdx_LRA   &tdw_LRP   &tdx_LRB   &tdx_LRR   &trans                           &trans     &trans     &trans     &trans     &trans     &kp BSLH
 &trans         &trans     &trans     &trans     &trans     &trans                           &trans     &trans     &trans     &trans     &trans     &kp PIPE
 &trans         &trans     &trans     &trans     &trans     &trans     &trans      &trans    &enDSH_W   &emDSH_W   &trans     &trans     &trans     &trans
-                                     &trans     &trans     &trans    &trans      &trans    &trans     &trans     &trans
+                                     &trans     &trans     &trans     &trans      &trans    &trans     &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp UP DOWN>;
