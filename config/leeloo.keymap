@@ -211,7 +211,7 @@
         };
 
         raise_dvorak_layer {
-            label = " raise"
+            label = " raise";
             bindings = <
 &trans     &trans     &trans     &trans     &trans     &trans                           &trans     &trans     &trans     &trans     &trans     &trans
 &trans     &trans     &trans     &trans     &trans     &trans                           &kp PG_UP  &kp HOME   &kp END    &trans     &trans     &trans
