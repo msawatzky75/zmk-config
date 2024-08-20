@@ -177,7 +177,7 @@
 &kp TAB    &kp SQT    &kp COMMA  &kp DOT    &kp P      &kp Y                            &kp F      &kp G      &kp C      &kp R      &kp L      &kp FSLH  // 12-23
 &kp LSHIFT &kp A      &kp O      &kp E      &kp U      &kp I                            &kp D      &kp H      &kp T      &kp N      &kp S      &kp MINUS // 24-35
 &kp LCTRL  &kp SEMI   &kp Q      &kp J      &kp K      &kp X  &lt QC_F C_PP  &mo QC_F   &kp B      &kp M      &kp W      &kp V      &kp Z      &kp RSHFT // 36-49
-                                 &kp LALT   &lt QW_L LGUI &mo QW_R  &kp SPACE &kp RET   &mo QW_R   &lt QW_L BSPC &mo QC_F                                // 50-58
+                                 &kp LALT   &lt QW_L LGUI &mo QW_R  &kp SPACE &kp RET   &lt QW_R EQUAL &lt QW_L BSPC &mo QC_F                                // 50-58
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
