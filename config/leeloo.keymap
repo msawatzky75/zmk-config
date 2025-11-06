@@ -54,8 +54,8 @@
 
 
 // Rotary Encoder Resolution
-//&left_encoder { resolution = <2>; };
-//&right_encoder { resolution = <2>; };
+&left_encoder { resolution = <1>; };
+&right_encoder { resolution = <1>; };
 
 / {
     conditional_layers {
