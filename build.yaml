@@ -15,7 +15,12 @@
 include:
   - board: nice_nano@2.0.0//zmk
     shield: leeloo_rev2_left
+    artifact_name: leeloo-left
+
   - board: nice_nano@2.0.0//zmk
     shield: leeloo_rev2_right
+    artifact_name: leeloo-right
+
   - board: nice_nano@2.0.0//zmk
     shield: settings_reset
+    artifact_name: leeloo-settings-reset
